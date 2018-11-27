@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <Frame Source="/Contact.xaml" />
+        <Frame Source="/Menu.xaml" />
 
     </StackPanel>
 </Window>

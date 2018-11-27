@@ -8,7 +8,18 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Menu">
 
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+        <Grid Margin="10 150 10 0" Height="100">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Margin="10" Content="Products"/>
+            <Button Grid.Column="1" Margin="10" Content="Live Support"/>
+            <Button x:Name="EmailSupportButton" Grid.Column="2" Margin="10" Content="Email Support" Click="EmailSupportButton_Click"/>
+        </Grid>
+        <TextBlock Text="Adventure Works" FontWeight="Bold" FontStyle="Italic" FontSize="30" Padding="80 30 0 0"/>
+    </StackPanel>
 </Page>

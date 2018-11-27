@@ -24,5 +24,13 @@ namespace BikeShop
         {
             InitializeComponent();
         }
+
+        private void EmailSupportButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(
+                new Uri("/Contact.xaml", UriKind.Relative)
+                );
+
+        }
     }
 }
