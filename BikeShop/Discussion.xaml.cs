@@ -23,6 +23,8 @@ namespace BikeShop
         public Discussion()
         {
             InitializeComponent();
+            Talk talk = new Talk();
+            ChatList.DataContext = talk;
         }
     }
 }
