@@ -32,5 +32,12 @@ namespace BikeShop
                 );
 
         }
+
+        private void LiveSupportButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(
+                new Uri("/Discussion.xaml", UriKind.Relative)
+                );
+        }
     }
 }
