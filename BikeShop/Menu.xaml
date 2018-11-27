@@ -16,7 +16,7 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition Width="3*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Margin="10" Content="Products"/>
+            <Button x:Name="ProdcutButton" Grid.Column="0" Margin="10" Content="Products" Click="ProdcutButton_Click"/>
             <Button x:Name="LiveSupportButton" Grid.Column="1" Margin="10" Content="Live Support" Click="LiveSupportButton_Click"/>
             <Button x:Name="EmailSupportButton" Grid.Column="2" Margin="10" Content="Email Support" Click="EmailSupportButton_Click"/>
         </Grid>

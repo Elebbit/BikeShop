@@ -1,0 +1,41 @@
+﻿<Page x:Class="BikeShop.ProductsManagement"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BikeShop"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProductsManagement">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Label Margin="10 20 0 0" Content="Search:" />
+            <TextBox x:Name="SearchTextBox" Margin="20 25 0 0"  Width="600" Height="20" VerticalAlignment="Top" TextChanged="SearchTextBox_TextChanged"/>
+        </StackPanel>
+        <DataGrid x:Name="ProductDataGrid" Grid.Row="1" Margin="10 0 20 10">
+        </DataGrid>
+        <StackPanel Grid.Column="1" Grid.Row="1" DataContext="{Binding SelectedItem, ElementName=ProductDataGrid}">
+            <Label Margin="0 30 0 20" Content="Product Details" HorizontalAlignment="Center" FontSize="25" />
+            <Label Content="Title" Margin="10 0 0 0" />
+            <TextBox Margin="10 0 10 0" Text="{Binding Title}" />
+            <Label Content="Price" Margin="10 0 0 0" />
+            <TextBox Margin="10 0 10 0" Text="{Binding Price}"/>
+            <Label Content="Color" Margin="10 0 0 0" />
+            <TextBox Margin="10 0 10 0" Text="{Binding Color}" />
+            <Rectangle Fill="{Binding Color}" Height="10" Margin="10 0 10 0"/>
+            <Label Content="Reference" Margin="10 0 0 0" />
+            <TextBox Margin="10 0 10 0" Text="{Binding Reference}" />
+            
+
+        </StackPanel>
+    </Grid>
+</Page>
